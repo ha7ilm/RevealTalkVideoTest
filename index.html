@@ -31,20 +31,46 @@
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 		<script>
+
+			var slideTimeMap =
+			[];
+
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
+				talkVideo:
+		   		{
+		   			animateOnStart: true,
+		   			slideTimeMap: slideTimeMap,
+		   			youtubeVideoId: 'fgFto-Oj-uw', // <--- replace with own video ID
+		   			playerWidth: 300,
+		   			playerHeight: 168,
+		   			playerAutoStart: true,
+		   			playerAutoStartOnlyOnFirstSlide: true
+		   		},
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/talkvideo/talkvideo.js' }
 				]
 			});
 		</script>
+		<style>
+		.reveal-talkvideo iframe {
+		    position: fixed;
+		    left: 15px;
+		    bottom: 15px;
+		}
+		</style>
+		<div class="reveal-talkvideo">
+		    <div id="reveal-talkvideo-player"></div>
+		</div>
 	</body>
 </html>

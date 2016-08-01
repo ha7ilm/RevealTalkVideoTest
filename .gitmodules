@@ -1,0 +1,6 @@
+[submodule "plugin/RevealTalkVideo"]
+	path = plugin/RevealTalkVideo
+	url = https://github.com/ha7ilm/RevealTalkVideo
+[submodule "plugin/talkvideo"]
+	path = plugin/talkvideo
+	url = https://github.com/ha7ilm/RevealTalkVideo
